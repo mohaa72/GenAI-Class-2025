@@ -5,8 +5,6 @@ Contents
 
 Assignments – All coursework and solutions
 Projects – Practical exercises and class projects
-Resources – Notes, tutorials, datasets, and useful links
-Notes – Summaries and key concepts from lectures
 
 How to Use
 
