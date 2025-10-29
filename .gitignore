@@ -1,0 +1,18 @@
+# Python virtual envs
+.venv/
+venv/
+backend_py/.venv/
+frontend/.venv/
+
+# Bytecode
+__pycache__/
+*.pyc
+
+# Streamlit cache
+frontend/.streamlit/
+
+# Generated outputs
+outputs/*
+
+# macOS junk
+.DS_Store
