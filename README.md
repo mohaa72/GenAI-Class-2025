@@ -1,16 +1,35 @@
-# GenAI-Class-2025
-Welcome to my repository for GenAI Class 2025! This repo contains all assignments, projects, and resources related to the class.
+# Codebase Genius (Jac Multi-Agent Documentation Generator)
 
-Contents
+## What it does
+- Input: Public GitHub repo URL.
+- Pipeline in Jac:
+  1. RepoMapper → clone repo, build file tree, summarize README.
+  2. CodeAnalyzer → parse code (Python, Jac, JS/TS), build Code Context Graph (CCG).
+  3. DocGenie → generate docs.md with project overview, file tree, Mermaid diagram, API reference.
+  4. Supervisor → orchestrates all steps.
+- Output: `outputs/<repo_name>/docs.md`.
 
-Assignments – All coursework and solutions
-Projects – Practical exercises and class projects
+## How it works
+- Jac defines nodes/edges (RepoNode, FileNode, SymbolNode, ContainsEdge, CallsEdge).
+- Jac walkers build a live graph of the repository.
+- Python helpers do:
+  - cloning (GitPython),
+  - AST/regex parsing,
+  - Markdown doc generation.
+- `jac serve jac/main.jac` exposes the walker `api_generate_docs` as an HTTP endpoint.
+- A Streamlit frontend calls that API and shows animated UI.
 
-How to Use
+---
 
-Clone the repository:
-git clone https://github.com/mohaa72/GenAI-Class-2025.git
-Explore the folders for assignments, projects, and resources
+## Setup and Run
 
-Pull updates regularly to stay up-to-date:
-git pull origin main
+### 1. Backend Python environment (Terminal A)
+```bash
+cd agentic_codebase_genius/backend_py
+python3 -m venv .venv
+source .venv/bin/activate  # Windows PowerShell: .venv\\Scripts\\Activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Allow Jac to import backend_py.* via py.<module>.<function>
+export PYTHONPATH=$(pwd):$PYTHONPATH
