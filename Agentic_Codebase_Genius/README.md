@@ -23,8 +23,6 @@
 
 ## Setup and Run
 
-### 1. Backend Python environment (Terminal A)
-```bash
 cd agentic_codebase_genius/backend_py
 python3 -m venv .venv
 source .venv/bin/activate  # Windows PowerShell: .venv\\Scripts\\Activate
