@@ -24,19 +24,25 @@
 ## Setup and Run
 # ------ #
 cd agentic_codebase_genius/backend_py
+
 python3 -m venv .venv
-source .venv/bin/activate  # Windows PowerShell: .venv\\Scripts\\Activate
+
+source .venv/bin/activate  
+
+Windows PowerShell: .venv\\Scripts\\Activate
+
 pip install --upgrade pip
+
 pip install -r requirements.txt
 
 Allow Jac to import backend_py.* via py.<module>.<function>
 export PYTHONPATH=$(pwd):$PYTHONPATH
 
-2️⃣ Start Jac Server (Terminal A)
+1. Start Jac Server (Terminal A)
 
 jac serve jac/main.jac
 
-3️⃣ Frontend Setup (Terminal B)
+2. Frontend Setup (Terminal B)
 
 cd agentic_codebase_genius/frontend
 streamlit run app.py
