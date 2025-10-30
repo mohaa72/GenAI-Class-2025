@@ -33,3 +33,13 @@ pip install -r requirements.txt
 
 # Allow Jac to import backend_py.* via py.<module>.<function>
 export PYTHONPATH=$(pwd):$PYTHONPATH
+
+2️⃣ Start Jac Server (Terminal A)
+
+jac serve jac/main.jac
+
+3️⃣ Frontend Setup (Terminal B)
+
+cd agentic_codebase_genius/frontend
+streamlit run app.py
+
