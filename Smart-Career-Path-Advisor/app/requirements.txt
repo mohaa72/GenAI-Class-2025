@@ -1,0 +1,9 @@
+python-dotenv
+PyPDF2
+python-docx
+requests
+beautifulsoup4
+firecrawl-py
+jac-client
+byllm
+mistralai

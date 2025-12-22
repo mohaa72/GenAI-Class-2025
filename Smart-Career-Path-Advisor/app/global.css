@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import "tailwindcss";
+
+
+@theme{
+    --color-primary: #6e11b0;
+    --font-zalando: "Zalando Sans", sans-serif;
+}
+
+:root{
+    --bg-primary: #6e11b0;
+    --font-zalando: "Zalando Sans", sans-serif;
+
+}
+body{
+    margin:"0";
+    padding:"0";
+    background:"black";
+}
+
+@keyframes bounce {
+  from { transform: translateY(0px); opacity: 0.4; }
+  to { transform: translateY(-6px); opacity: 1; }
+}
+
+.loading-dot {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.swiper-wrapper{
+  padding-bottom: calc(.25rem * 12);
+}
+.swiper-pagination-bullet{
+  background: white !important;
+
+}
+
+#root > div > div > div.w-\[80\%\].mx-auto.py-20.grid.grid-cols-1.lg\:grid-cols-\[40\%_60\%\].gap-10.items-center > div:nth-child(2) > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background: var(--color-primary) !important;
+}
+
+#root > div > div > div.w-\[80\%\].mx-auto.py-20.grid.grid-cols-1.lg\:grid-cols-\[40\%_60\%\].gap-10.items-center > div:nth-child(2) > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span{
+  background: white !important;
+}
