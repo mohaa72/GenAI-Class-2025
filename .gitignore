@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+*.sqlite3
+
+# Node / frontend builds
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# Jac / tooling (add your real build/cache folders if any)
+.jac/
+.jac-cache/
+.cache/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Logs
+*.log
+
